@@ -91,7 +91,7 @@ title.config(bg=YELLOW, fg=GREEN, pady=10)
 title.grid(column=1, row=0)
 
 canvas = Canvas(width=202, height=224, bg=YELLOW, highlightthickness=0)
-pomodoro_image = PhotoImage(file="pomodoro-start/tomato.png")
+pomodoro_image = PhotoImage(file="tomato.png")
 canvas.create_image(102, 112, image=pomodoro_image)
 timer_text = canvas.create_text(102, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1, row=1)
