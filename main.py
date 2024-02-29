@@ -24,6 +24,7 @@ def reset_timer():
     tick.config(text="", bg=YELLOW)
     global reps
     reps = 0  # this is so that reps keep increasing and it'll jump to next stage even after reset
+    start_button.config(state="normal")
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
@@ -36,7 +37,9 @@ def start_timer():
     reps += 1
     print(reps)
 
-    # this way using modulo the program can run forever and code is short instead of what i last did reps == numbers
+    start_button.config(state="disabled")
+
+    # this way using modulo the program can run forever and code is short
     if reps % 8 == 0:
         countdown(long_break_seconds)
         title.config(text="Long Break", fg=RED, bg="#A4BC92")
