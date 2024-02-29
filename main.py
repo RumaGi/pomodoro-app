@@ -41,18 +41,21 @@ def start_timer():
 
     # this way using modulo the program can run forever and code is short
     if reps % 8 == 0:
+        # countdown set to long break which is 20minutes
         countdown(long_break_seconds)
         title.config(text="Long Break", fg=RED, bg="#A4BC92")
         window.config(bg="#A4BC92")
         canvas.config(bg="#A4BC92")
         tick.config(bg="#A4BC92")
     elif reps % 2 == 0:
+        # countdown set to Short break which is 5minutes
         countdown(short_break_seconds)
         title.config(text="Short Break", fg=PINK, bg="#6C9BCF")
         window.config(bg="#6C9BCF")
         canvas.config(bg="#6C9BCF")
         tick.config(bg="#6C9BCF")
     else:
+        # countdown set to Short break which is 25minutes
         countdown(work_seconds)
         title.config(text="Working time", fg=GREEN, bg="#E97777")
         window.config(bg="#E97777")
